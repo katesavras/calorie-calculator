@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" width="device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="script.js"></script>
+    <title>calorie counter</title>
+</head>
+<body>
+<div class="container">
+    <h1>Счетчик калорий</h1>
+    <form>
+        <label class="title">Пол</label>
+            <br>
+            <label for="man"> Мужчина</label>
+            <input  type="radio" id="man" name="sex">
+            <label for="women">Женщина</label>
+            <input type="radio" id="women" name="sex">
+
+        <br>
+        <div class="numbers">
+        <label for="age" class="title">Возраст <span class="ed">лет</span>
+            <br>
+            <input type="text" id="age">
+        </label>
+        <br>
+        <label for="height" class="title">Рост <span class="ed">см</span>
+            <br>
+            <input type="text" id="height"></label>
+        <br>
+        <label for="weight" class="title">Вес <span class="ed">кг</span>
+            <br>
+            <input type="text" id="weight"></label>
+        </div>
+        <br>
+        <label class="title">Физическая активность</label>
+        <br>
+        <input type="radio" id="min" name="activity">
+        <label for="min">Минимальная <br>
+            <span>Сидячая работа и нет физических нагрузок</span>
+        </label>
+        <br>
+        <input type="radio" id="low" name="activity">
+        <label for="low">Низкая <br>
+            <span>Редкие не регулярные тренировки, активность в быту</span>
+        </label>
+        <br>
+        <input type="radio" id="middle" name="activity">
+        <label for="middle">Средняя<br>
+            <span>Тренировки 3-5 раз в неделю</span>
+        </label>
+        <br>
+        <input type="radio" id="high" name="activity">
+        <label for="high">Высокая<br>
+            <span>Тренировки 6-7 раз в неделю</span>
+        </label>
+        <br>
+        <input type="radio" id="max" name="activity">
+        <label for="max">Очень высокая<br>
+            <span>Больше 6 тренировкок в неделю и физическая работа</span>
+        </label>
+        <br>
+        <button class="btn">Рассчитать</button>
+        <button class="btn">Очистить поля и расчет</button>
+    </form>
+
+    <div class="results">
+        <h2>Ваша норма калорий</h2>
+        <div class="results__norm">
+            <div>
+                <p class="count">2 500 ккал</p>
+                <p class="norma">поддержание веса</p>
+            </div>
+            <div>
+                <p class="count">2 100 ккал</p>
+                <p class="norma">снижение веса</p>
+            </div>
+            <div>
+                <p class="count">2 800 ккал</p>
+                <p class="norma">набор веса</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

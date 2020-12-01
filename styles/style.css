@@ -4,9 +4,8 @@ body{
     width: 100%;
     height: 100vh;
     background-image: url("../img/fons.jpg") ;
-
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: scroll;
 
 
@@ -16,12 +15,9 @@ body{
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
 
-
-
-
 }
 h1{
-    color: #fcfcfc;
+    color: white;
     text-align: center;
 }
 .title{
@@ -50,16 +46,39 @@ form{
     border-radius: 10px;
     padding: 20px;
 }
-input[type="radio"] {
-  color: #f67d26;
+/*change style-color input radio*/
+.chek{
+    display: inline-block;
+    position: relative;
 }
-.sex{
-    color: #323232;
+.chek input[type='radio'] {
+    display: none;
+
+}
+
+.chek label:before {
+    content: " ";
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
     border: 1px solid #f67d26;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
+    background-color: transparent;
 }
+
+ .chek input[type=radio]:checked + label:after{
+     content: " ";
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 6px;
+     left: 7px;
+    position: absolute;
+     display: block;
+    background-color: #f67d26;
+}
+
 
 .numbers{
     padding-top: 10px;
@@ -101,14 +120,22 @@ h2{
 .results__norm{
     display: flex;
     justify-content: space-around;
+
+}
+.results__norm div{
+    width: 30%;
 }
 .count{
+
     color: #323232;
     font-weight: bold;
     font-size: large;
     text-align: center;
-
+    border-bottom: 1px solid #f67d26;
+    background-color: transparent;
+    box-shadow: 1px 1px 5px darkgray;
 }
 .norma{
     color: #818080;
+    text-align: center;
 }

@@ -3,7 +3,7 @@ body{
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("../img/fons.jpg") ;
+    background-image: url("../img/fon.jpg") ;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: scroll;
@@ -17,7 +17,7 @@ body{
 
 }
 h1{
-    color: white;
+    color: #fcf9f7;
     text-align: center;
 }
 .title{
@@ -41,8 +41,7 @@ label{
 
 }
 form{
-
-    background-color: white;
+    background-color: #f6f2f2;
     border-radius: 10px;
     padding: 20px;
 }
@@ -107,7 +106,7 @@ form{
 }
 
 .results{
-    background-color: white;
+    background-color: #eae8e8;
     border-radius: 10px;
     padding: 5px;
     margin-top: 10px;

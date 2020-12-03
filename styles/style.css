@@ -3,9 +3,10 @@ body{
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("../img/fon.jpg") ;
+
+    background-image: linear-gradient(rgba(51, 51, 51, 0.58), rgba(51, 51, 51, 0.58)), url("../img/top-view-organic-fruits-table.jpg");
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat:repeat;
     background-attachment: scroll;
 
 
@@ -19,6 +20,7 @@ body{
 h1{
     color: #fcf9f7;
     text-align: center;
+
 }
 .title{
     font-weight: bold;
@@ -31,8 +33,8 @@ h1{
     padding-left: 5px;
 }
 span{
-    color: #acaaaa;
-    font-size: 16px;
+    color: #8d8d8d;
+    font-size: 15px;
     padding-left: 20px;
 }
 label{
@@ -41,7 +43,7 @@ label{
 
 }
 form{
-    background-color: #f6f2f2;
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     padding: 20px;
 }
@@ -106,7 +108,7 @@ form{
 }
 
 .results{
-    background-color: #eae8e8;
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     padding: 5px;
     margin-top: 10px;
@@ -125,16 +127,20 @@ h2{
     width: 30%;
 }
 .count{
-
     color: #323232;
     font-weight: bold;
     font-size: large;
     text-align: center;
     border-bottom: 1px solid #f67d26;
-    background-color: transparent;
+    background-color: whitesmoke;
     box-shadow: 1px 1px 5px darkgray;
+    transition: transform 0.3s;
+}
+.count:hover{
+    transform: scale(1.2);
+
 }
 .norma{
-    color: #818080;
+    color: #5f5e5e;
     text-align: center;
 }

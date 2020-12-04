@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
-    <script src="script.js"></script>
+
     <title>calorie counter</title>
 </head>
 <body>
@@ -17,27 +17,28 @@
         <label class="title">Пол</label>
         <br>
         <div class="chek">
-            <input type="radio" id="man" name="sex">
-            <label for="man"> Мужчина</label>
+            <input type="radio"  id="woman" name="genders" value="woman">
+            <label for="woman">Женщина</label>
         </div>
         <div class="chek">
-            <input type="radio" id="women" name="sex">
-            <label for="women">Женщина</label>
+            <input type="radio" checked="checked" id="man" name="genders" value="man">
+            <label for="man"> Мужчина</label>
         </div>
+
         <br>
         <div class="numbers">
             <label for="age" class="title">Возраст <span class="ed">лет</span>
                 <br>
-                <input type="text" id="age">
+                <input type="text" id="age" value="">
             </label>
             <br>
             <label for="height" class="title">Рост <span class="ed">см</span>
                 <br>
-                <input type="text" id="height"></label>
+                <input type="text" id="height" value=""></label>
             <br>
             <label for="weight" class="title">Вес <span class="ed">кг</span>
                 <br>
-                <input type="text" id="weight"></label>
+                <input type="text" id="weight" value=""></label>
         </div>
         <br>
         <label class="title">Физическая активность</label>
@@ -77,7 +78,7 @@
             </label>
         </div>
         <br>
-        <button class="btn">Рассчитать</button>
+        <input type="button" class="btn" id="counts" value="Рассчитать">
         <button class="btn">Очистить поля и расчет</button>
     </form>
 
@@ -102,5 +103,6 @@
     </div>
 
 </div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -43,6 +43,7 @@ label{
 
 }
 form{
+    display: block;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     padding: 20px;
@@ -106,13 +107,28 @@ form{
     background-color: #f69226;
     box-shadow: 1px 1px 5px  darkgray;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(160, 159, 159, 0.4);
+}
 
 .results{
-    background-color: rgba(255, 255, 255, 0.85);
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #f3e979;
     border-radius: 10px;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 1);
+
+
 }
 h2{
     color: #f67d26;
@@ -126,7 +142,7 @@ h2{
 .results__norm div{
     width: 30%;
 }
-.count{
+.output{
     color: #323232;
     font-weight: bold;
     font-size: large;
@@ -136,11 +152,21 @@ h2{
     box-shadow: 1px 1px 5px darkgray;
     transition: transform 0.3s;
 }
-.count:hover{
+.output:hover{
     transform: scale(1.2);
 
 }
 .norma{
     color: #5f5e5e;
     text-align: center;
+}
+#btnClose{
+    color: white;
+    background-color: #f37007;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    margin: 10px;
+
 }

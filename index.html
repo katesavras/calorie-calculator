@@ -17,11 +17,11 @@
         <label class="title">Пол</label>
         <br>
         <div class="chek">
-            <input type="radio"  id="woman" name="genders" value="woman">
+            <input type="radio" id="woman" name="genders" value="woman" checked="checked">
             <label for="woman">Женщина</label>
         </div>
         <div class="chek">
-            <input type="radio" checked="checked" id="man" name="genders" value="man">
+            <input type="radio" id="man" name="genders" value="man">
             <label for="man"> Мужчина</label>
         </div>
 
@@ -29,23 +29,23 @@
         <div class="numbers">
             <label for="age" class="title">Возраст <span class="ed">лет</span>
                 <br>
-                <input type="text" id="age" value="">
+                <input type="text" id="age">
             </label>
             <br>
             <label for="height" class="title">Рост <span class="ed">см</span>
                 <br>
-                <input type="text" id="height" value=""></label>
+                <input type="text" id="height"></label>
             <br>
             <label for="weight" class="title">Вес <span class="ed">кг</span>
                 <br>
-                <input type="text" id="weight" value=""></label>
+                <input type="text" id="weight"></label>
         </div>
         <br>
         <label class="title">Физическая активность</label>
         <br>
         <div class="chek">
-            <input type="radio" id="min" name="activity">
-            <label for="min">Минимальная <br>
+            <input type="radio" id="min" name="activity" checked="checked">
+            <label for="min" >Минимальная <br>
                 <span>Сидячая работа и нет физических нагрузок</span>
             </label>
         </div>
@@ -78,30 +78,30 @@
             </label>
         </div>
         <br>
-        <input type="button" class="btn" id="counts" value="Рассчитать">
-        <button class="btn">Очистить поля и расчет</button>
+        <input type="button" class="btn" onclick="calculate()" value="Рассчитать">
+        <input type="reset" class="btn" value="Очистить поля">
     </form>
 
-    <div class="results">
-        <h2>Ваша норма калорий</h2>
-        <div class="results__norm">
-            <div>
-                <p class="count">2 500 ккал</p>
-                <p class="norma">поддержание веса</p>
+    <div class="modal">
+        <div class="results">
+            <h2>Ваша норма калорий</h2>
+            <div class="results__norm">
+                <div>
+                    <p class="output" id="maintain"></p>
+                    <p class="norma">поддержание веса</p>
+                </div>
+                <div>
+                    <p class="output" id="lose"></p>
+                    <p class="norma">снижение веса</p>
+                </div>
+                <div>
+                    <p class="output" id="gain"></p>
+                    <p class="norma">набор веса</p>
+                </div>
             </div>
-            <div>
-                <p class="count">2 100 ккал</p>
-                <p class="norma">снижение веса</p>
-            </div>
-            <div>
-                <p class="count">2 800 ккал</p>
-                <p class="norma">набор веса</p>
-
-
-            </div>
+            <button id="btnClose">Close</button>
         </div>
     </div>
-
 </div>
 <script src="script.js"></script>
 </body>

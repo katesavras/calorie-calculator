@@ -1,7 +1,22 @@
+let btnCount = document.querySelector("#btnCount");
+let age = document.getElementById("age");
+let height = document.getElementById("height");
+let weight = document.getElementById("weight");
+let numbers = document.querySelector(".numbers");
+
+
+btnCount.addEventListener("click", ()=>{
+    if (age.value !== "" && height.value !== "" && weight.value !== "") {
+            calculate()
+    } else {
+        let error = document.createElement('p');
+        error.style.color = "red";
+        error.innerHTML = "Поля должны быть заполнены!";
+        numbers.after(error);
+        setTimeout(() => error.remove(), 1500);
+    }
+})
 function calculate() {
-    let age = document.getElementById("age");
-    let height = document.getElementById("height");
-    let weight = document.getElementById("weight");
     let maintainWeight = document.getElementById("maintain");
     let gain = document.getElementById("gain");
     let lose = document.getElementById("lose");
@@ -9,6 +24,7 @@ function calculate() {
     let activity = document.getElementsByName("activity");
     let modal = document.querySelector(".modal");
     let form = document.querySelector("form");
+    let btnClose = document.querySelector("#btnClose");
 
     let calories = 0;
     let calActivity = 0;
@@ -16,7 +32,6 @@ function calculate() {
     let loseWeight = 0;
 
     calcWeight(age, height, weight);
-
 
     function calcWeight(age, height, weight) {
         for (let i = 0; i < gender.length; i++) {
@@ -31,7 +46,9 @@ function calculate() {
             }
         }
     }
+
     calcActivity(calories);
+
     function calcActivity(calories) {
         for (let y = 0; y < activity.length; y++) {
             if (activity[0].checked) {
@@ -54,8 +71,8 @@ function calculate() {
     }
 
     if (isFinite(calActivity)) {
-        form.style.display ="none"
-        modal.style.display ="block";
+        form.style.display = "none"
+        modal.style.display = "block";
 
         maintainWeight.innerHTML = calActivity.toFixed(0);
         gainWeight = calActivity * 1.05;
@@ -64,11 +81,11 @@ function calculate() {
         lose.innerHTML = loseWeight.toFixed(0);
 
     }
-    let btnClose = document.querySelector("#btnClose");
-    btnClose.addEventListener("click", ()=>{
-        form.style.display ="block"
-        modal.style.display ="none";
+
+    btnClose.addEventListener("click", () => {
+        form.style.display = "block"
+        modal.style.display = "none";
         form.reset();
     })
-}
 
+}

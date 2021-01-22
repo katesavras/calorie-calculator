@@ -29,8 +29,7 @@
         <div class="numbers">
             <label for="age" class="title">Возраст <span class="ed">лет</span>
                 <br>
-                <input type="text" id="age">
-            </label>
+                <input type="text" id="age"></label>
             <br>
             <label for="height" class="title">Рост <span class="ed">см</span>
                 <br>
@@ -40,12 +39,12 @@
                 <br>
                 <input type="text" id="weight"></label>
         </div>
-        <br>
+
         <label class="title">Физическая активность</label>
         <br>
         <div class="chek">
             <input type="radio" id="min" name="activity" checked="checked">
-            <label for="min" >Минимальная <br>
+            <label for="min">Минимальная <br>
                 <span>Сидячая работа и нет физических нагрузок</span>
             </label>
         </div>
@@ -78,12 +77,15 @@
             </label>
         </div>
         <br>
-        <input type="button" class="btn" onclick="calculate()" value="Рассчитать">
+        <input type="button" class="btn" id="btnCount" value="Рассчитать">
         <input type="reset" class="btn" value="Очистить поля">
     </form>
 
     <div class="modal">
         <div class="results">
+            <div class="btnWrap">
+                <button id="btnClose">Х</button>
+            </div>
             <h2>Ваша норма калорий</h2>
             <div class="results__norm">
                 <div>
@@ -99,7 +101,7 @@
                     <p class="norma">набор веса</p>
                 </div>
             </div>
-            <button id="btnClose">Close</button>
+
         </div>
     </div>
 </div>

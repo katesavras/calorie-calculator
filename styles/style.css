@@ -4,7 +4,7 @@ body{
     width: 100%;
     height: 100vh;
 
-    background-image: linear-gradient(rgba(51, 51, 51, 0.58), rgba(51, 51, 51, 0.58)), url("../img/top-view-organic-fruits-table.jpg");
+    background-image: linear-gradient(rgba(51, 51, 51, 0.58), rgba(51, 51, 51, 0.58)), url("../img/fruit.jpg");
     background-size: cover;
     background-repeat:repeat;
     background-attachment: scroll;
@@ -26,7 +26,7 @@ h1{
     font-weight: bold;
     font-size: 20px;
     line-height: 1.5;
-    /*padding-top: 10px;*/
+    margin: 10px;
 }
 .ed{
     font-weight: normal;
@@ -48,14 +48,12 @@ form{
     border-radius: 10px;
     padding: 20px;
 }
-/*change style-color input radio*/
 .chek{
     display: inline-block;
     position: relative;
 }
 .chek input[type='radio'] {
     display: none;
-
 }
 
 .chek label:before {
@@ -161,12 +159,20 @@ h2{
     text-align: center;
 }
 #btnClose{
-    color: white;
-    background-color: #f37007;
-    border-radius: 5px;
-    padding: 10px 15px;
+    color: #2d2c2c;
+    background-color: transparent;
+    font-size: 18px;
     border: none;
     outline: none;
-    margin: 10px;
-
+}
+#btnClose:hover{
+    color: whitesmoke;
+    background-color: #f5863e;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+.btnWrap{
+    display:flex;
+    justify-content: flex-end;
 }

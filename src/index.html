@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet">
+  <title>calorie counter</title>
+</head>
+<body>
+<div class="container">
+  <h1>Счетчик калорий</h1>
+  <form>
+
+    <label class="title">Пол</label>
+    <br>
+    <div class="chek">
+      <input checked="checked" id="woman" name="genders" type="radio" value="woman">
+      <label for="woman">Женщина</label>
+    </div>
+    <div class="chek">
+      <input id="man" name="genders" type="radio" value="man">
+      <label for="man"> Мужчина</label>
+    </div>
+
+    <br>
+    <div class="numbers">
+      <label class="title" for="age">Возраст <span class="ed">лет</span>
+        <br>
+        <input id="age" type="text"></label>
+      <br>
+      <label class="title" for="height">Рост <span class="ed">см</span>
+        <br>
+        <input id="height" type="text"></label>
+      <br>
+      <label class="title" for="weight">Вес <span class="ed">кг</span>
+        <br>
+        <input id="weight" type="text"></label>
+    </div>
+
+    <label class="title">Физическая активность</label>
+    <br>
+    <div class="chek">
+      <input checked="checked" id="min" name="activity" type="radio">
+      <label for="min">Минимальная <br>
+        <span>Сидячая работа и нет физических нагрузок</span>
+      </label>
+    </div>
+    <br>
+    <div class="chek">
+      <input id="low" name="activity" type="radio">
+      <label for="low">Низкая <br>
+        <span>Редкие не регулярные тренировки, активность в быту</span>
+      </label>
+    </div>
+    <br>
+    <div class="chek">
+      <input id="middle" name="activity" type="radio">
+      <label for="middle">Средняя<br>
+        <span>Тренировки 3-5 раз в неделю</span>
+      </label>
+    </div>
+    <br>
+    <div class="chek">
+      <input id="high" name="activity" type="radio">
+      <label for="high">Высокая<br>
+        <span>Тренировки 6-7 раз в неделю</span>
+      </label>
+    </div>
+    <br>
+    <div class="chek">
+      <input id="max" name="activity" type="radio">
+      <label for="max">Очень высокая<br>
+        <span>Больше 6 тренировкок в неделю и физическая работа</span>
+      </label>
+    </div>
+    <br>
+    <input class="btn" id="btnCount" type="button" value="Рассчитать">
+    <input class="btn" type="reset" value="Очистить поля">
+  </form>
+
+  <div class="modal">
+    <div class="results">
+      <div class="btnWrap">
+        <button id="btnClose">Х</button>
+      </div>
+      <h2>Ваша норма калорий</h2>
+      <div class="results__norm">
+        <div>
+          <p class="output" id="maintain"></p>
+          <p class="norma">поддержание веса</p>
+        </div>
+        <div>
+          <p class="output" id="lose"></p>
+          <p class="norma">снижение веса</p>
+        </div>
+        <div>
+          <p class="output" id="gain"></p>
+          <p class="norma">набор веса</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
